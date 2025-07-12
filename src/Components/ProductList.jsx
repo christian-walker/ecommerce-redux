@@ -5,7 +5,7 @@ import { addCartItem, clearCart, decrementItemQuantity, deleteItemFromCart, incr
 
 const ProductList = () => {
   const dispatch = useDispatch();
-  const cartItems = useSelector(state => state.cart.cartIems); // Get cart items globally
+  const cartItems = useSelector(state => state.cart.cartItems); // Get cart items globally
 
 
   const products = [
@@ -17,25 +17,6 @@ const ProductList = () => {
   const handleAddToCart = product => {
     dispatch(addCartItem(product)); // Add product to cart
   }
-
-  const handleDeleteFromCart = product => {
-    dispatch(deleteItemFromCart(product)); // Add product to cart
-  }
-
-
-  const handleClearCart = product => {
-    dispatch(clearCart(product)); // Add product to cart
-  }
-
-
-  const handleIncrementItemQuantity = product => {
-    dispatch(incrementItemQuantity(product)); // Add product to cart
-  }
-
-  const handleDecrementItemQuantity = product => {
-    dispatch(decrementItemQuantity(product)); // Add product to cart
-  }
-
 
   return (
     <div className="product-list">
