@@ -11,7 +11,7 @@ const totalAmount = cartItems.reduce((total, item) => total + item.price * item.
 
 
 const handleDeleteFromCart = (itemId) => {
-dispatch(deleteItemFromCart(itemId)); // Delete product to cart
+dispatch(deleteItemFromCart(itemId)); // Delete product from cart
 }
 
 
@@ -36,7 +36,7 @@ dispatch(decrementItemQuantity(itemId)); // Add product to cart
       <ul className="cart-items">
        {
         cartItems.map((item) => (
-            <li key={item.id} style={{display:"flex", justifyContent: "space-between"}}>
+            <li key={item.id} style={{display:"flex", justifyContent: "space-between", gap: "5"}}>
                 <span>{item.name} - ${item.price}</span>
                 <div className="quantity-controls">
                     <button className="quantity-control-btn" onClick={() => handleDecrementItemQuantity(item.id)}>-</button>
