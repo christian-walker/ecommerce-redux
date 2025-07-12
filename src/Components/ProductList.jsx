@@ -1,7 +1,7 @@
 import React from 'react';
 import './ProductList.css'; 
 import { useDispatch, useSelector } from 'react-redux';
-import { addCartItem, clearCart, decrementItemQuantity, deleteItemFromCart, incrementItemQuantity } from './CartSlice';
+import { addCartItem } from './CartSlice';
 
 const ProductList = () => {
   const dispatch = useDispatch();
